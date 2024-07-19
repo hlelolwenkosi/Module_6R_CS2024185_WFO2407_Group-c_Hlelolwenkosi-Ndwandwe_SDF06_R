@@ -34,7 +34,10 @@ img {
     color: inherit;
     padding: 0;
     cursor: pointer;
-
 }
 
+.btn:focus {
+    outline: 0.5rem auto #4d90fe;
+
+}
 
