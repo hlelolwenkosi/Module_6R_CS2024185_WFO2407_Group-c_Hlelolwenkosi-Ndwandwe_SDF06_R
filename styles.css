@@ -90,8 +90,30 @@ img {
     display: inline-block;
     font-size: 3.2rem;
     font-weight: 300;
-    
+
 }
+.profile-edit-btn {
+    font size: 1.4rem;
+    line-height: 1.8;
+    border: 0.1rem solid #dbdbdb;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    margin-left: 2rem;
+}
+ .profile-settings-btn {
+    font-size: 2rem;
+    margin-left: 1rem;
+
+ }
+
+ 
+
+
+
+
+
+
+
 
 .
 
