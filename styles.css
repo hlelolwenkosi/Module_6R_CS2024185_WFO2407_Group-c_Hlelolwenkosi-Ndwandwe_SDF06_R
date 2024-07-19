@@ -75,6 +75,26 @@ img {
 
 }
 
+.profile-user-settings,.profile-stats,
+.profile-bio { 
+    float: left;
+    width: calc(66.66% - 2rem);
+}
+
+.profile-user-settings {
+    margin-top: 1.1rem;
+
+}
+
+.profile-user-name{
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+    
+}
+
+.
+
 
 
 
