@@ -1,7 +1,7 @@
 /* Base Styles */
 
 :root {
-    font-size: 10px;
+    font-size:0.625rem; 
 }
 
 *,
@@ -21,6 +21,7 @@ body {
 img {
     display: block;
 }
+
 .container {
     max-width: 93.5rem;
     margin: 0 auto;
@@ -38,28 +39,27 @@ img {
 
 .btn:focus {
     outline: 0.5rem auto #4d90fe;
-
 }
 
 .visually-hidden {
     position: absolute !important;
-    height: 1px;
-    width: 1px;
+    height: 0.0625rem;
+    width: 0.0625rem;
     overflow: hidden;
-    clip: rect(1px,1px,1px.1px);
+    clip: rect(0.0625rem, 0.0625rem, 0.0625rem, 0.0625rem);
 }
 
+/* Profile Section */
 .profile {
     padding: 5rem 0;
-
 }
 
 .profile::after {
     content: "";
     display: block;
     clear: both;
-
 }
+
 .profile-image {
     float: left;
     width: calc(33.33% - 1rem);
@@ -67,31 +67,31 @@ img {
     justify-content: center;
     align-items: center;
     margin-right: 3rem;
-    
 }
+
 .profile-image img {
     border-radius: 50%;
-
-
+    box-sizing: border-box;
+    border: 0.625rem solid cadetblue;
 }
 
-.profile-user-settings,.profile-stats,
-.profile-bio { 
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
     float: left;
     width: calc(66.66% - 2rem);
 }
 
 .profile-user-settings {
     margin-top: 1.1rem;
-
 }
 
-.profile-user-name{
+.profile-user-name {
     display: inline-block;
     font-size: 3.2rem;
     font-weight: 300;
-
 }
+
 .profile-edit-btn {
     font-size: 1.4rem;
     line-height: 1.8;
@@ -100,15 +100,14 @@ img {
     padding: 0.3rem;
     margin-left: 2rem;
 }
- .profile-settings-btn {
+
+.profile-settings-btn {
     font-size: 2rem;
     margin-left: 1rem;
-
- }
+}
 
 .profile-stats {
     margin-top: 2.3rem;
-
 }
 
 .profile-stats li {
@@ -116,17 +115,18 @@ img {
     font-size: 1.6rem;
     line-height: 1.5;
     cursor: pointer;
+    padding-right: 5rem;
 }
 
 .profile-stats li:last-of-type {
     margin-right: 0;
 }
+
 .profile-bio {
     font-size: 1.6rem;
-    font-weight: 400;
-    line-height:  1.5em;
+    font-weight: 600;
+    line-height: 1.5em;
     margin-top: 2.3rem;
-
 }
 
 .profile-real-name,
@@ -135,7 +135,7 @@ img {
     font-weight: 600;
 }
 
-
+/* Gallery Section */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -163,7 +163,7 @@ img {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.gallery-item-info { 
+.gallery-item-info {
     display: none;
 }
 
@@ -192,6 +192,7 @@ img {
     object-fit: cover;
 }
 
+/* Loader Animation */
 .loader {
     width: 5rem;
     height: 5rem;
@@ -200,112 +201,77 @@ img {
     border-radius: 50%;
     margin: 0 auto;
     animation: loader 500ms linear infinite;
-
 }
 
-
-
-/* media query*/
- @media screen and (max-width:40rem){
-    .profile { 
+/* Media Query for Responsive Design */
+@media screen and (max-width: 40rem) {
+    .profile {
         display: flex;
         flex-wrap: wrap;
         padding: 4rem 0;
-    
-    }   
+    }
     .profile::after {
         display: none;
-        }
-     
+    }
     .profile-image,
     .profile-user-settings,
     .profile-bio,
     .profile-stats {
         float: none;
-        width:auto;
-    
+        width: auto;
     }
     .profile-image img {
         width: 7.7rem;
-    
-
     }
     .profile-user-settings {
-        flex-basis: calc(100% -10.7rem);
+        flex-basis: calc(100% - 10.7rem);
         display: flex;
         flex-wrap: wrap;
-        margin-top:1rem;
-
+        margin-top: 1rem;
     }
     .profile-user-name {
         font-size: 2.2rem;
-
     }
     .profile-edit.btn {
         order: 1;
         padding: 0;
         text-align: center;
         margin-top: 1rem;
-
-   }
-   .profile-edit-btn {
-    margin-left: 0;
-
-   }
-
-   .profile-bio {
-    font-size: 1.4rem;
-    margin-top: 1,5rem;
-   }
-
-   .profile-edit-btn,
-   .profile-bio,
-   .profile-stats {
-    flex-basis: 100%;
-   }
-
-
-
-
-        
-
-
- }
-    
- 
-
-
-
-
-
-
-
-
-
-
-
-. 
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-.
-
-
-
-
-
-
-
-.
-
+    }
+    .profile-edit-btn {
+        margin-left: 0;
+    }
+    .profile-bio {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+    .profile-edit-btn,
+    .profile-bio,
+    .profile-stats {
+        flex-basis: 100%;
+    }
+    .profile-stats {
+        order: 1;
+        margin-top: 1.5rem;
+    }
+    .profile-stats ul {
+        display: flex;
+        text-align: center;
+        padding: 1.2rem 0;
+        border-top: 0.1rem solid #dadada;
+        border-bottom: 0.1rem solid #dadada;
+    }
+    .profile-stats li {
+        font-size: 1.4rem;
+        flex: 1;
+        margin: 0;
+    }
+    .profile-stat-count {
+        display: block;
+    }
+}
+@keyframes loader {
+    to {
+        transform: rotate(360deg);
+    }
+}
